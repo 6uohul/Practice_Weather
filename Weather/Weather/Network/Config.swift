@@ -8,3 +8,6 @@
 import Foundation
 
 // Config 만들어주세요~
+struct Config {
+    
+}
