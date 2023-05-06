@@ -12,7 +12,7 @@ enum Config {
     
     enum Keys {
         enum Plist {
-            static let basesURL = "BASE_URL"
+            static let baseKEY = "BASE_KEY"
         }
     }
     
@@ -25,10 +25,10 @@ enum Config {
 }
 
 extension Config {
-    static let baseURL: String = {
-        guard let key = Config.infoDictionary[Keys.Plist.basesURL] as? String else {
+    static let baseKEY: String = {
+        guard let key = Config.infoDictionary[Keys.Plist.baseKEY] as? String else {
             fatalError("Base URL is not set in plist for this configuration.")
         }
         return key
-    }
+    }()
 }
